@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication()
-@MapperScan("com.bd.repository")
+//@MapperScan("com.bd.repository")
 public class WebApplication {
 
     public static void main(String[] args) {
