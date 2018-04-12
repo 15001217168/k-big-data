@@ -15,6 +15,11 @@
     </svg>
 </div>
 <script type="application/javascript">
+
+    $.post("/bd/data",[],function (res) {
+        console.log(res);
+    });
+
     // Tree configuration
     var branches = [];
     var seed = {i: 0, x: 420, y: 600, a: 0, l: 130, d: 0}; // a = angle, l = length, d = depth
