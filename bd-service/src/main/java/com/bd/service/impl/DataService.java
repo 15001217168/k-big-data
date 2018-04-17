@@ -3,7 +3,8 @@ package com.bd.service.impl;
 import com.bd.message.request.FindDataRequest;
 import com.bd.message.response.FindDataResponse;
 import com.bd.message.view.model.DataViewModel;
-import com.bd.model.entity.DataEntity;
+import com.bd.model.entity.ContentEntity;
+import com.bd.model.entity.SiteEntity;
 import com.bd.repository.IDataRepository;
 import com.bd.service.IDataService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +19,9 @@ public class DataService implements IDataService {
     @Override
     public FindDataResponse getDatas(FindDataRequest req) {
         FindDataResponse resp = new FindDataResponse();
-        DataEntity data = dataRepository.getById(req.id);
+        SiteEntity data = dataRepository.getSite(req.id);
         if (data != null) {
-            resp.setData(new DataViewModel(data.getData()));
+            resp.setData(new DataViewModel(data.getName()));
         } else {
             resp.setData(new DataViewModel("无数据"));
         }

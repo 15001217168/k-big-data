@@ -7,17 +7,17 @@ public class EntityBase implements Serializable {
     private int id;
     private Timestamp create_at;
     private Timestamp update_at;
-    private boolean is_deleted;
+    private boolean deleted;
 
     public EntityBase() {
 
     }
 
-    public EntityBase(int id, Timestamp create_at, Timestamp update_at, boolean is_deleted) {
+    public EntityBase(int id, Timestamp create_at, Timestamp update_at, boolean deleted) {
         this.id = id;
         this.create_at = create_at;
         this.update_at = update_at;
-        this.is_deleted = is_deleted;
+        this.deleted = deleted;
     }
 
     public int getId() {
@@ -44,11 +44,11 @@ public class EntityBase implements Serializable {
         this.update_at = update_at;
     }
 
-    public boolean isIs_deleted() {
-        return is_deleted;
+    public boolean getDeleted() {
+        return deleted;
     }
 
-    public void setIs_deleted(boolean is_deleted) {
-        this.is_deleted = is_deleted;
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
     }
 }
