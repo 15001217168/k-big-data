@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="bd-infrastructure:jar">
-    <output-path>$PROJECT_DIR$/bd-infrastructure/target</output-path>
-    <root id="archive" name="bd-infrastructure.jar">
-      <element id="module-output" name="bd-infrastructure" />
-    </root>
-  </artifact>
-</component>
