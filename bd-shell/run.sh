@@ -4,9 +4,9 @@
 #获取脚本名称
 SCRIPT=$0
 #获取进程名称，必须为完整程序名，否则可能会误操作其他进程
-APP_NAME=$1
+APP_NAME="bd-website.jar"
 #获取操作符
-OPERATOR=$2
+OPERATOR=$1
 
 usage() {
     echo "Usage: sh $SCRIPT [app_name] [start|stop|restart|status]"
@@ -15,7 +15,7 @@ usage() {
 
 #判断是否输入了两个参数
 #注意①
-if [ $# != 2 ]; then
+if [ $# != 1 ]; then
     usage
 fi
 
@@ -38,6 +38,7 @@ start(){
     echo "${APP_NAME} is already running. pid=${pid} ."
   else
     nohup java -jar $APP_NAME > /dev/null 2>&1 &
+   fi
 }
 
 stop(){
